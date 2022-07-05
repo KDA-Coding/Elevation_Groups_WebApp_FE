@@ -2,17 +2,22 @@ import './App.css';
 import { Groups } from "./groups"
 
 function App() {
+
+  //const [query, setQuery] = useState("");
+
   return (
     <div className="App">
       <input type="text" placeholder="Search for a group!" className="search" />
       <ul className="groupList">
-        <li className="groupListItem">Group 1</li>
-        <li className="groupListItem">Group 2</li>
-        <li className="groupListItem">Group 3</li>
-        <li className="groupListItem">Group 4</li>
-        <li className="groupListItem">Group 5</li>
-        <li className="groupListItem">Group 6</li>
-        <li className="groupListItem">Group 7</li>
+        {Groups.map((group) => (
+          
+            <li className="groupListItem" key={group.id.toString()}>
+              <div className="groupCard">
+                <p></p>
+              </div>
+            </li>
+          
+        ))}
       </ul>
     </div>
   );
