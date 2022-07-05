@@ -23,9 +23,8 @@ function App() {
                       <button className="btn">Get Involved</button>
                   </div>
                 </div>
-              </li>
-            
-          ))}
+              </li> 
+            ))}
         </ul>
       </div>   
     </div>
