@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import { Groups } from "./groups"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <input type="text" placeholder="Search for a group!" className="search" />
+      <ul className="groupList">
+        <li className="groupListItem">Group 1</li>
+        <li className="groupListItem">Group 2</li>
+        <li className="groupListItem">Group 3</li>
+        <li className="groupListItem">Group 4</li>
+        <li className="groupListItem">Group 5</li>
+        <li className="groupListItem">Group 6</li>
+        <li className="groupListItem">Group 7</li>
+      </ul>
     </div>
   );
 }
