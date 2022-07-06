@@ -1,13 +1,26 @@
-import { Controller, NotImplementedException } from '@nestjs/common';
+import { Controller, Get, Param, NotFoundException } from '@nestjs/common';
+import { GroupsService } from './groups.service';
 import { get } from 'http';
-import { Get } from '@nestjs/common';
 
 @Controller('groups')
 export class GroupsController {
 
+    constructor(private readonly groupService: GroupsService) {}
+
     @Get()
     getGroups() {
-        throw new NotImplementedException();
+        return this.groupService.findAllGroups();
+    }
+
+    @Get(':groupId')
+    getGroupById(@Param('groupId') id:number) {
+        let group = this.groupService.findGroupById(id);
+
+        if(!group) {
+            throw new NotFoundException(`Task with Id ${id} not found`)
+        }
+
+        return group
     }
 
 }
