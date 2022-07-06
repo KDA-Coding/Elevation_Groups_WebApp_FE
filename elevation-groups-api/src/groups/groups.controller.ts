@@ -1,4 +1,4 @@
-import { Controller, Get, Param, NotFoundException } from '@nestjs/common';
+import { Controller, Get, Param, Query, NotFoundException } from '@nestjs/common';
 import { GroupsService } from './groups.service';
 import { get } from 'http';
 
@@ -11,6 +11,12 @@ export class GroupsController {
     getGroups() {
         return this.groupService.findAllGroups();
     }
+
+    @Get()
+    getFilteredGroups(@Query() query: any): string {
+    return this.groupService.findFilteredGroups(query.id);
+  }
+
 
     @Get(':groupId')
     getGroupById(@Param('groupId') id:number) {

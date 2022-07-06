@@ -68,6 +68,8 @@ export class GroupsService {
         return this._groups.find(g => g.id == id);
     }
 
-    
+    findFilteredGroups(id:number) : string {
+        return `Group ID: ${id}`;
+    }
 
 }
