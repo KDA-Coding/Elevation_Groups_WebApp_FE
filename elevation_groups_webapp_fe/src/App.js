@@ -3,12 +3,12 @@ import React from 'react';
 
 async function get_groups() {
 
-    let groups = await fetch("http://localhost:4000/groups", {mode: "no-cors"}).then(g=>g.json())
+    let groups = await fetch("http://localhost:4000/groups").then(g=>g.json())
 
-    console.log( "This is what's in groups: ", groups )
+    //Groups API Fetch Check
+    //console.log( "This is what's in groups: ", groups )
 
-    // todo - replace this with fetch call to NextJS
-  return groups // PUT your groups json here from your data file
+  return groups
 }
 
 
@@ -23,7 +23,8 @@ export default function App(props) {
   const [filter_settings, set_filter_settings] = React.useState( Object.fromEntries( filter_keys.map( fk => [fk, null] ) ) );
   const [loaded, set_loaded] = React.useState(false);
 
-  console.log(filter_settings)
+  // Filter Settings Check
+  //console.log(filter_settings)
 
   function groups_received(groups)
   {
@@ -67,7 +68,7 @@ export default function App(props) {
           <label>{fk.replaceAll("_", " ")} </label>
           <select onChange={ e => filters_changed( fk, e.target.value ) }>
             <option value="">All</option>
-            {ops.map( o => (<option value={o}>{ fk.includes("date") ? new Date(o).toLocaleDateString() : o}</option>) )}
+            {ops.map( o => (<option key={o} value={o}>{ fk.includes("date") ? new Date(o).toLocaleDateString() : o}</option>) )}
           </select>
           </div>
           ))}
