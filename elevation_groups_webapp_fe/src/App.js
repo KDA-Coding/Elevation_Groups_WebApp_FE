@@ -1,5 +1,4 @@
 import './App.css';
-import { Groups } from "./groups"
 import React from 'react';
 
 async function get_groups() {
