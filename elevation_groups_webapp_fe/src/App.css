@@ -5,7 +5,12 @@
 }
 
 .App {
-  text-align: center;
+  font-family: sans-serif;
+  display: flex;
+}
+
+.list > div {
+  padding: 1em;
 }
 
 .search {
