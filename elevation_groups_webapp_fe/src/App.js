@@ -3,7 +3,10 @@ import React from 'react';
 
 async function get_groups() {
 
-    let groups = await fetch("/groups").then((g=>g.json()))
+    let groups = await fetch("http://localhost:4000/groups", {mode: "no-cors"}).then(g=>g.json())
+
+    console.log( "This is what's in groups: ", groups )
+
     // todo - replace this with fetch call to NextJS
   return groups // PUT your groups json here from your data file
 }
