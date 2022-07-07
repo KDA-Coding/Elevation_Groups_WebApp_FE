@@ -2,9 +2,11 @@ import './App.css';
 import { Groups } from "./groups"
 import React from 'react';
 
-async function get_groups(){
+async function get_groups() {
+
+    let groups = await fetch("/groups").then((g=>g.json()))
     // todo - replace this with fetch call to NextJS
-  return [] // PUT your groups json here from your data file
+  return groups // PUT your groups json here from your data file
 }
 
 
