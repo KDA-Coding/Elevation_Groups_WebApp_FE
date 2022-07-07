@@ -41,7 +41,7 @@ export default function App(props) {
       { groups
         .filter( g => filter_keys
           .every( fk =>  
-            filter_settings[fk] == null || g[fk] === filter_settings[fk] 
+            filter_settings[fk] == null || String(g[fk]) === filter_settings[fk] 
           ) )
         .map( g => (<div className='group-entry' key={g.id}> 
         <div> What : {g.description}</div>
