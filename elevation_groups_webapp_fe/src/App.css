@@ -5,71 +5,37 @@
 }
 
 .App {
-  font-family: sans-serif;
+  width: 100%;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
 }
 
-.list > div {
+.list {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.group-entry {
+  width: 600px;
+  margin: 5px;
+  border: 2px solid black;
+  background-color: orange;
   padding: 1em;
 }
 
-.search {
-  padding: 10px;
-  margin-top: 40px;
-  font-size: 20px;
-}
-
-.container {
-  width: 90%;
-  margin: 50px auto;
-}
-
-.group-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.group-list-item {
-  display: flex;
-  list-style: none;
-  margin-bottom: 10px;
-  font-size: 18px;
-  color: #444;
-  font-weight: 100;
-  justify-content: center;
-  text-align: center;
-}
-
-.card {
-  width: 40%;
-  background: orange;
-  border: 2px solid #ccc;
-  margin-bottom: 20px;
-  transition:0.3s;
-}
-
-.card-header {
-  text-align: center;
-  padding: 50px, 10px;
-  background: linear-gradient(to right, gray, black);
-  color: #fff;
-}
-
-.card-body {
-  padding: 30px 20px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.card-body .btn {
-  display: block;
-  color: black;
-  font-weight: bold;
-  text-align: center;
-  background: linear-gradient(to right, white, gray);
-  margin-top: 15px;
-  text-decoration: none;
-  padding: 10px 5px;
+.controls {
+  display: inline-block;
+  justify-content: space-between;
+  width: 300px;
+  margin: 5px;
+  border: 2px solid black;
+  background-color: rgb(138, 137, 136);
+  padding: 1em;
 }

@@ -19,7 +19,7 @@ export class GroupsService {
       id: 2,
       campus: 'Ballantyne',
       demographic: 'Singles',
-      group_type: 'Spiritual_Growth',
+      group_type: 'Spiritual Growth',
       meeting_date: '2020-12-02T19:16:57.985Z',
       zip_code: 28277,
       description:

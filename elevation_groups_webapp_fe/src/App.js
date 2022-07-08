@@ -44,7 +44,7 @@ export default function App(props) {
             filter_settings[fk] == null || String(g[fk]) === filter_settings[fk] 
           ) )
         .map( g => (<div className='group-entry' key={g.id}> 
-        <div> What : {g.description}</div>
+        <div> What : {g.group_type} - {g.description}</div>
         <div> Where : {g.campus} ({g.zip_code}) </div>
         <div> For : {g.demographic}</div>
         <div> When: {new Date(g.meeting_date).toLocaleDateString()}</div>
@@ -61,7 +61,6 @@ export default function App(props) {
 
   return (
     <div className='App'>
-      <GroupsDisplay/>
       <div className='controls'>
         {filters.map( ([fk, ops]) => (
           <div className="filterInput" key={fk}>
@@ -73,6 +72,7 @@ export default function App(props) {
           </div>
           ))}
       </div>
+      <GroupsDisplay/>
     </div>
   );
 }
