@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .list {
@@ -26,16 +26,42 @@
   width: 600px;
   margin: 5px;
   border: 2px solid black;
+  border-radius: 10px;
   background-color: orange;
   padding: 1em;
+  font-weight: bold;
 }
 
 .controls {
-  display: inline-block;
-  justify-content: space-between;
-  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 800px;
   margin: 5px;
   border: 2px solid black;
+  border-radius: 10px;
   background-color: rgb(138, 137, 136);
   padding: 1em;
+}
+
+.controls label {
+  display: flex;
+  background: black;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+select {
+  height: 60%;
+  width: 120px;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f1f1f1;
 }
